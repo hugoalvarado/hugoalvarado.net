@@ -1,0 +1,25 @@
+{
+  "name": "hugoalvarado-net",
+  "version": "1.0.0",
+  "description": "Sources for hugoalvarado.net.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev vuepress",
+    "build": "vuepress build vuepress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugoalvarado/hugoalvarado.net.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugoalvarado/hugoalvarado.net/issues"
+  },
+  "homepage": "https://github.com/hugoalvarado/hugoalvarado.net#readme",
+  "dependencies": {
+    "vuepress": "^1.5.0"
+  }
+}

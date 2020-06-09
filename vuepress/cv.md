@@ -91,6 +91,7 @@ Fluent in English and Spanish
 - https://hugoalvarado.github.io
 - https://www.linkedin.com/in/hugoalvarado/
 - http://twitter.com/_hugoalvarado
+- https://dev.to/hugoalvarado
 
 
 <!-- ### Footer

@@ -1,5 +1,6 @@
 module.exports = {
     host: 'localhost',
     title: ' ',
-    description: ' '
+    description: ' ',
+    navbar: false,
 }
