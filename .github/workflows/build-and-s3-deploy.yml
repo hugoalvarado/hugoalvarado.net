@@ -3,31 +3,31 @@ name: Build and Deploy
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        # TARGET_REPO: username/repo
-        TARGET_BRANCH: master
-        BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: vuepress/.vuepress/dist/
+      - name: vuepress-deploy
+        uses: jenkey2011/vuepress-deploy@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # TARGET_REPO: username/repo
+          TARGET_BRANCH: master
+          BUILD_SCRIPT: yarn && yarn build
+          BUILD_DIR: vuepress/.vuepress/dist/
 
-   - name: S3-deploy
-   - uses: jakejarvis/s3-sync-action@master
-     with:
-       args: --delete
-     env:
-       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-       AWS_REGION: us-east-1   # optional: defaults to us-east-1
-       SOURCE_DIR: vuepress/.vuepress/dist'/     # optional: defaults to entire repository
+    - name: S3-deploy
+      uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1   # optional: defaults to us-east-1
+          SOURCE_DIR: vuepress/.vuepress/dist'/     # optional: defaults to entire repository
