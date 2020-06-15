@@ -3,4 +3,5 @@ module.exports = {
     title: ' ',
     description: ' ',
     navbar: false,
+    search: false,
 }
