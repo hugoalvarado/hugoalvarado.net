@@ -1,9 +1,11 @@
+---
 title: Getting the IP of a running Docker Container
 date: 2016-12-16
 tags: Docker, Vagrant, networking, dhcp
 category: Tech
 slug: get-docker-ip
 Summary: 
+---
 
 I had a few Docker containers running on static ips locally, my Vagrant file had
 
