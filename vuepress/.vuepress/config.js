@@ -3,11 +3,11 @@ module.exports = {
     title: ' ',
     description: ' ',
     themeConfig: {
+        search: false,
         nav: [
             {text: 'Home', link: "/"},
             {text: 'Blog', link: "/blog/"}
         ]
     },
     sidebar: false,
-    search: false,
 }

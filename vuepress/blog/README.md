@@ -2,5 +2,5 @@
 blog_index: true
 ---
 
-# Posts by me ✍️:
+# Posts/Notes by me ✍️:
 <BlogIndex />
