@@ -4,9 +4,6 @@
             <h2>
                 <router-link :to="post.path">{{ post.frontmatter.title }}</router-link>
             </h2>
-            <p>
-                <router-link :to="post.path">Read more</router-link>
-            </p>
         </div>
     </div>
 </template>
