@@ -12,7 +12,7 @@ module.exports = {
     sidebar: false,
     plugins: [
         [
-            '@vuepress/google-analytics',
+            '@vuepress/plugin-google-analytics',
             {
                 'ga': 'UA-171809471-1'
             }
