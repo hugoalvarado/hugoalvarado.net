@@ -23,6 +23,5 @@
     "vuepress": "^1.5.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.5.3"
   }
 }

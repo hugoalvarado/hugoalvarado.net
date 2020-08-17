@@ -10,12 +10,17 @@ module.exports = {
         ]
     },
     sidebar: false,
-    plugins: [
-        [
-            '@vuepress/plugin-google-analytics',
-            {
-                'ga': 'UA-171809471-1'
-            }
-        ]
-    ]
+    head: [
+      ['script', {
+          async: true,
+          src: 'https://www.googletagmanager.com/gtag/js?id=UA-171809471-1'
+      }],
+      ['script', {}, `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', 'UA-171809471-1');
+      `]
+  ],
 }
