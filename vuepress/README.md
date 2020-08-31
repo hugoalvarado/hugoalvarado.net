@@ -12,4 +12,4 @@ preferably in Python and a modern JS framework. Experienced in full-time remote 
 Loves pizza 🍕. Husband and father 👨‍👩‍👧‍👦. Hobby gardener 🍅. 
 AWS [Certified](https://www.youracclaim.com/badges/db60b566-df7a-40bb-99bc-b8a8177b8534/) Solutions Architect 🍻.
 
-[CV](/cv/) | [Blog](/blog/)
+[CV](/cv/) | [Blog](/blog/) | [GitHub](https://github.com/hugoalvarado/)
