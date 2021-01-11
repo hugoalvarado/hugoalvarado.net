@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/hugoalvarado/hugoalvarado.net#readme",
   "dependencies": {
-    "vuepress": "^1.5.0"
+    "vuepress": "^1.8.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

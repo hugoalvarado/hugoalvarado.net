@@ -20,7 +20,7 @@ __Over 10 years working on web development (backend and frontend), preferably in
 
 ## Currently
 
-I'm a Lead Developer at [BriteCore](http://www.britecore.com/) where I help write next generation insurance software in the cloud with python, vue and aws.
+I'm an Engineering Manager at [BriteCore](http://www.britecore.com/) where I help write next generation insurance software in the cloud with python, vue and aws.
 
 
 ## Technical skills
@@ -42,12 +42,14 @@ I'm a Lead Developer at [BriteCore](http://www.britecore.com/) where I help writ
   
 ## Employment
 
-`Springfield, MO (Remote) - 2017- ` 
+`Springfield, MO (Remote) - 2020- `
+__BriteCore__ Engineering Manager.
+
+`Springfield, MO (Remote) - 2017-2020` 
 __BriteCore__ Lead Developer.
 
 `Full Stack Developer - Tampa, FL (Remote) - Jan 2015-2017`
 __Circumscribe.org__ Circumscribe.org is a portal for members of the different Masonic Lodges in Florida. I worked with another developer to create a web app and backend where members can login, pay membership charges, setup their profile, take simple exams, search for other users, schedule activities and perform maintenance tasks. Tech: React, knockoutj.s, php, Lumen (Laravel), mysql, linux.
-
 
 `Team Lead - Minneapolis, MN (Remote) - July 2008-2017`
 __ProPoint Software__ ProPoint (Rogers Software) is one of the top salon software systems in the US market, with many national chain, regional chain and independent salons and schools for customers in the USA, India and Europe. While working in different teams and projects throughout the years I was part of the design and implementation of many core pieces of their software ecosystem, ranging from automated customer backups to custom reporting interfaces, hardware integrations and importing of legacy databases. I oversaw and developws multiple company products, both customer facing and internal. Managed a team of 5 devs from the USA, CR, Argentina and India. Accomplishments • Improved and enhanced important components like the custom nightly backup system, custom reporting tools, central customer database shared and updated between stores, stylist/student grading interface. • Quickly and reliably completed bugs and enhancement tickets in the trac system. • Overhauled the ui by cleaning up css files, applying common css classes and removing inline styles, involving another Jr Dev. This effort greatly improved the look of the system and allowed templates to be easily applied. • Lead development of multiple releases. Tech: php, mysql, javascript, linux, docker, Symfony2
