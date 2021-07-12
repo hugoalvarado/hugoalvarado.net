@@ -19,7 +19,7 @@ Done:
 
 Todo:
 1. Cloud formation deploy of lamba function, sns topic, iam roles.
-1. VUE code reorganizarion - currently everyting is in a large component 😵.
+1. VUE code reorganization - currently everything is in a large component 😵.
 1. Refactor motion detection code into nativescript plugin/component.
 
 Sources are [here](https://github.com/hugoalvarado/snek/).
