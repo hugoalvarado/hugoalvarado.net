@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Google Chrome Bookmark Analysis Part 1 |  </title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-171809471-1"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', 'UA-171809471-1');
+      </script>
+    <meta name="description" content=" ">
+    
+    <link rel="preload" href="/assets/css/0.styles.641eebb4.css" as="style"><link rel="preload" href="/assets/js/app.d0f7d8bf.js" as="script"><link rel="preload" href="/assets/js/2.153b31e1.js" as="script"><link rel="preload" href="/assets/js/11.d2ba1945.js" as="script"><link rel="prefetch" href="/assets/js/10.b0f1a90e.js"><link rel="prefetch" href="/assets/js/12.35504387.js"><link rel="prefetch" href="/assets/js/13.5128b65e.js"><link rel="prefetch" href="/assets/js/14.9880c7f9.js"><link rel="prefetch" href="/assets/js/15.50c63aa6.js"><link rel="prefetch" href="/assets/js/16.dece0227.js"><link rel="prefetch" href="/assets/js/17.b738f322.js"><link rel="prefetch" href="/assets/js/18.14bad02a.js"><link rel="prefetch" href="/assets/js/19.f6320817.js"><link rel="prefetch" href="/assets/js/20.92167262.js"><link rel="prefetch" href="/assets/js/21.d10a0ebb.js"><link rel="prefetch" href="/assets/js/22.b3303ffb.js"><link rel="prefetch" href="/assets/js/23.035528b7.js"><link rel="prefetch" href="/assets/js/24.36f58769.js"><link rel="prefetch" href="/assets/js/25.9725727d.js"><link rel="prefetch" href="/assets/js/26.32a41268.js"><link rel="prefetch" href="/assets/js/27.ddfaacca.js"><link rel="prefetch" href="/assets/js/28.ab845ff1.js"><link rel="prefetch" href="/assets/js/29.b1ab4b2b.js"><link rel="prefetch" href="/assets/js/3.3d847817.js"><link rel="prefetch" href="/assets/js/30.1231aed1.js"><link rel="prefetch" href="/assets/js/31.ffba4ad5.js"><link rel="prefetch" href="/assets/js/32.57b28f91.js"><link rel="prefetch" href="/assets/js/33.831d5031.js"><link rel="prefetch" href="/assets/js/4.805f7c17.js"><link rel="prefetch" href="/assets/js/5.23ce8c2c.js"><link rel="prefetch" href="/assets/js/6.796b7189.js"><link rel="prefetch" href="/assets/js/7.4c5ed574.js"><link rel="prefetch" href="/assets/js/8.e56c6e0f.js"><link rel="prefetch" href="/assets/js/9.6257291a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.641eebb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name"> </span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>I, like many others have a collection of bookmarked sites. The goal is to save them and to read or review them later, but alas, later never comes, and the bookmarked sites keep growing, locking their secrets deep in the interwebs and the Chrome profile in your computer.</p> <p>Being a student of the software arts data analysis yoga, I felt a tool to extract some insights on the Chrome Bookmarks json file would be a nice little project.</p> <p>My goal is be able to generate graphs and stats with Python to gather insights on the things I've been bookmarking through the years. Possibly embarrassing insights... you have been warned.</p> <p>Much of the inspiration in this project comes from http://brandonrose.org/clustering (thanks for the awesome write up), I will be applying a lot of the techniques explained there. This is a learning experience for me in multiple ways. I will be learning while I build this... thing, and will (hopefully) learn something with the data it generates.</p> <p>I have a somewhat working version but the generated plot is not what I expected. In my mind I was thinking there would be a group of dots for my python bookmarks, then a group for my bikini model pics and so on, but instead I got this:</p> <p><img src="/images/bookmark-analysis-part1-figure_1.png" alt="Ahh, finally a nice...plot?"></p> <p>That does not look right, so I will be reviewing my script (source is in my github) and the data and will write up my findings here soon.</p> <p>Don't forget to bookmark this page!</p> <p>References:<br>
+http://brandonrose.org/clustering
+https://github.com/hugoalvarado/chrome-bookmark-thing</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d0f7d8bf.js" defer></script><script src="/assets/js/2.153b31e1.js" defer></script><script src="/assets/js/11.d2ba1945.js" defer></script>
+  </body>
+</html>
