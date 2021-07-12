@@ -1,6 +1,6 @@
 ---
 home: true
-xheroImage: hugo.jpg
+heroImage: hugo-gray.png
 heroText: Hi, I am Hugo. Welcome!
 actionText: See my CV →
 actionLink: /cv/
