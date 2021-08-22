@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: Hi, I am Hugo. Welcome!
-actionText: See my CV →
+heroText: Hi, I am Hugo!
+actionText: Checkout my CV →
 actionLink: /cv/
 footer: Developed using VuePress ♥️ | Hosted on AWS 🤖
 ---
