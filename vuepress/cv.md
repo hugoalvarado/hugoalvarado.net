@@ -44,9 +44,16 @@ I'm an Engineering Manager at [BriteCore](http://www.britecore.com/) where I hel
 
 `Springfield, MO (Remote) - 2020- `
 __BriteCore__ Engineering Manager.
+Development manager of 2 small remote teams (Policies and Quotes) where I conducted 1-on-1s, weekly planning sessions 
+with the Product Owner and helped the development team members complete their tasks by clarifying technical or 
+business questions. Met with clients when required and helped route and resolve urgent issues.
 
 `Springfield, MO (Remote) - 2017-2020` 
 __BriteCore__ Lead Developer.
+As part of the Policies Dev team I was involved in the development and maintenance of core business logic and multiple data migrations. Work routinely involved backend (Python/AWS services) and frontend (JS/Vue) 
+development. Presented an internal tech-talk [Applying K-Means Clustering to Policy Notes](https://www.youtube.com/watch?v=Sz6WXmgOQh4&feature=youtu.be).
+Helped solve defects and assisted team members. 
+Performed code reviews and began the implementation of a test suite using [Cypress](https://www.cypress.io/).
 
 `Full Stack Developer - Tampa, FL (Remote) - Jan 2015-2017`
 __Circumscribe.org__ Circumscribe.org is a portal for members of the different Masonic Lodges in Florida. I worked with another developer to create a web app and backend where members can login, pay membership charges, setup their profile, take simple exams, search for other users, schedule activities and perform maintenance tasks. Tech: React, knockoutj.s, php, Lumen (Laravel), mysql, linux.
