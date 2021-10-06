@@ -38,7 +38,7 @@ I'm an Engineering Manager at [BriteCore](http://www.britecore.com/) where I hel
 ## Areas of expertise
 
 * Backend, Rest APIs
-* Tacos 🌮
+* Event based architectures using AWS services
   
 ## Employment
 
