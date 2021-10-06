@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SVN Merging and conflict resolution with Meld |  </title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-171809471-1"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', 'UA-171809471-1');
+      </script>
+    <meta name="description" content=" ">
+    
+    <link rel="preload" href="/assets/css/0.styles.641eebb4.css" as="style"><link rel="preload" href="/assets/js/app.64f0a972.js" as="script"><link rel="preload" href="/assets/js/2.4d837ef2.js" as="script"><link rel="preload" href="/assets/js/19.4af90bb8.js" as="script"><link rel="prefetch" href="/assets/js/10.3be7bf04.js"><link rel="prefetch" href="/assets/js/11.5a9d3a09.js"><link rel="prefetch" href="/assets/js/12.71537472.js"><link rel="prefetch" href="/assets/js/13.c19bfba6.js"><link rel="prefetch" href="/assets/js/14.d1bdfb47.js"><link rel="prefetch" href="/assets/js/15.3b64262d.js"><link rel="prefetch" href="/assets/js/16.0b3a7205.js"><link rel="prefetch" href="/assets/js/17.85650068.js"><link rel="prefetch" href="/assets/js/18.2f621416.js"><link rel="prefetch" href="/assets/js/20.386b6ec3.js"><link rel="prefetch" href="/assets/js/21.4fb3126a.js"><link rel="prefetch" href="/assets/js/22.f975f967.js"><link rel="prefetch" href="/assets/js/23.f88211c6.js"><link rel="prefetch" href="/assets/js/24.b2f6edbe.js"><link rel="prefetch" href="/assets/js/25.d1f6c945.js"><link rel="prefetch" href="/assets/js/26.8dec1136.js"><link rel="prefetch" href="/assets/js/27.21ec4029.js"><link rel="prefetch" href="/assets/js/28.3f60cb3b.js"><link rel="prefetch" href="/assets/js/29.26bd8d91.js"><link rel="prefetch" href="/assets/js/3.d990c9a8.js"><link rel="prefetch" href="/assets/js/30.451cc9db.js"><link rel="prefetch" href="/assets/js/31.db6065a0.js"><link rel="prefetch" href="/assets/js/32.8dfa8c46.js"><link rel="prefetch" href="/assets/js/33.2a3895dd.js"><link rel="prefetch" href="/assets/js/34.3ba60f2f.js"><link rel="prefetch" href="/assets/js/35.0cf99460.js"><link rel="prefetch" href="/assets/js/4.7297339b.js"><link rel="prefetch" href="/assets/js/5.74980f9d.js"><link rel="prefetch" href="/assets/js/6.622670b7.js"><link rel="prefetch" href="/assets/js/7.8be2e03f.js"><link rel="prefetch" href="/assets/js/8.1245e070.js"><link rel="prefetch" href="/assets/js/9.a58a7e0d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.641eebb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name"> </span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>This is a quick guide on setting up Meld with SVN (not everyone uses git, yet) on Linux (Ubuntu Mate 17.04). This is largely based on http://stackoverflow.com/questions/7252011/how-to-set-up-svn-conflict-resolution-with-meld.</p> <p>First, create an svn_merge_meld.py script somewhere like /home/username/bin/:</p> <div class="language- extra-class"><pre><code>#!/usr/bin/env python
+# svn merge-tool python wrapper for meld 3.16.4 and svn, version 1.9.5 (r1770682)
+import sys
+import subprocess
+
+try:
+    # path to meld
+    meld = &quot;/usr/bin/meld&quot;
+
+    # file paths
+    base   = sys.argv[1]
+    theirs = sys.argv[2]
+    mine   = sys.argv[3]
+    merged = sys.argv[4]
+
+    cmd = [meld, base, mine, theirs, '-o', merged, '--auto-merge']
+
+    # Call meld, making sure it exits correctly
+    subprocess.check_call(cmd)
+except:
+    print &quot;Oh noes, an error!&quot;
+    sys.exit(-1)
+</code></pre></div><p>Then update the subversion config file in /home/username/.subversion/config:</p> <div class="language- extra-class"><pre><code>merge-tool-cmd = /home/username/bin/svn_merge_meld.py
+</code></pre></div><p>Remember to</p> <div class="language- extra-class"><pre><code>chmod +x /home/username/bin/svn_merge_meld.py
+</code></pre></div><p>Thats it!</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.64f0a972.js" defer></script><script src="/assets/js/2.4d837ef2.js" defer></script><script src="/assets/js/19.4af90bb8.js" defer></script>
+  </body>
+</html>

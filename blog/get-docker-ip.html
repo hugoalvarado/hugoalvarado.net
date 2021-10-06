@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting the IP of a running Docker Container |  </title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-171809471-1"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', 'UA-171809471-1');
+      </script>
+    <meta name="description" content=" ">
+    
+    <link rel="preload" href="/assets/css/0.styles.641eebb4.css" as="style"><link rel="preload" href="/assets/js/app.64f0a972.js" as="script"><link rel="preload" href="/assets/js/2.4d837ef2.js" as="script"><link rel="preload" href="/assets/js/27.21ec4029.js" as="script"><link rel="prefetch" href="/assets/js/10.3be7bf04.js"><link rel="prefetch" href="/assets/js/11.5a9d3a09.js"><link rel="prefetch" href="/assets/js/12.71537472.js"><link rel="prefetch" href="/assets/js/13.c19bfba6.js"><link rel="prefetch" href="/assets/js/14.d1bdfb47.js"><link rel="prefetch" href="/assets/js/15.3b64262d.js"><link rel="prefetch" href="/assets/js/16.0b3a7205.js"><link rel="prefetch" href="/assets/js/17.85650068.js"><link rel="prefetch" href="/assets/js/18.2f621416.js"><link rel="prefetch" href="/assets/js/19.4af90bb8.js"><link rel="prefetch" href="/assets/js/20.386b6ec3.js"><link rel="prefetch" href="/assets/js/21.4fb3126a.js"><link rel="prefetch" href="/assets/js/22.f975f967.js"><link rel="prefetch" href="/assets/js/23.f88211c6.js"><link rel="prefetch" href="/assets/js/24.b2f6edbe.js"><link rel="prefetch" href="/assets/js/25.d1f6c945.js"><link rel="prefetch" href="/assets/js/26.8dec1136.js"><link rel="prefetch" href="/assets/js/28.3f60cb3b.js"><link rel="prefetch" href="/assets/js/29.26bd8d91.js"><link rel="prefetch" href="/assets/js/3.d990c9a8.js"><link rel="prefetch" href="/assets/js/30.451cc9db.js"><link rel="prefetch" href="/assets/js/31.db6065a0.js"><link rel="prefetch" href="/assets/js/32.8dfa8c46.js"><link rel="prefetch" href="/assets/js/33.2a3895dd.js"><link rel="prefetch" href="/assets/js/34.3ba60f2f.js"><link rel="prefetch" href="/assets/js/35.0cf99460.js"><link rel="prefetch" href="/assets/js/4.7297339b.js"><link rel="prefetch" href="/assets/js/5.74980f9d.js"><link rel="prefetch" href="/assets/js/6.622670b7.js"><link rel="prefetch" href="/assets/js/7.8be2e03f.js"><link rel="prefetch" href="/assets/js/8.1245e070.js"><link rel="prefetch" href="/assets/js/9.a58a7e0d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.641eebb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name"> </span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  Blog
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>I had a few Docker containers running on static ips locally, my Vagrant file had</p> <div class="language- extra-class"><pre class="language-text"><code>config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.14&quot;
+config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.16&quot;
+</code></pre></div><p>And I could access my containers with each of those ips externally and internally. After running vagrant ssh I was able to run mysql -h192.168.33.14 as needed.</p> <p>At one point I changed the Vagrant file to use dhcp:</p> <div class="language- extra-class"><pre class="language-text"><code>config.vm.network &quot;public_network&quot;, type: &quot;dhcp&quot;
+</code></pre></div><p>Which assigned a new ip to my vm, set to 192.168.2.116 by my local dhcp router.
+Initially this worked fine but when I needed to access services in my containers from my vm I realized the ips had changed as well.</p> <p>To figure out the new ips I needed to first find the id of my container:</p> <div class="language- extra-class"><pre class="language-text"><code>docker ps
+</code></pre></div><p>Which told me that the container I wanted was f10b0af660f9 .</p> <p>Then a quick</p> <div class="language- extra-class"><pre class="language-text"><code>docker inspect f10b0af660f9 | grep -i ipaddress
+</code></pre></div><p>returned</p> <div class="language- extra-class"><pre class="language-text"><code>vagrant@ubuntu-14:~$ docker inspect f10b0af660f9 | grep -i ipaddress
+        &quot;SecondaryIPAddresses&quot;: null,
+        &quot;IPAddress&quot;: &quot;172.17.0.4&quot;,
+                &quot;IPAddress&quot;: &quot;172.17.0.4&quot;,
+</code></pre></div><p>Which of course meant I now had to use</p> <div class="language- extra-class"><pre class="language-text"><code>mysql -h172.17.0.4
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.64f0a972.js" defer></script><script src="/assets/js/2.4d837ef2.js" defer></script><script src="/assets/js/27.21ec4029.js" defer></script>
+  </body>
+</html>
