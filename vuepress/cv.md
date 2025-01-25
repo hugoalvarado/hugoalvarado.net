@@ -45,7 +45,7 @@ I'm an Engineering Manager at [Regis](https://www.regiscorp.com/) where I help e
 
 `Regis, Minneapolis (Remote) - 2022- `
 __BriteCore__ Engineering Manager.
-Development manager and technical lead. 
+Development manager and technical lead.
 Helped in identifying and migrating/rewriting on-prem software to AWS.
 Developed solutions that are now supporting key areas of the business:
 - Apis to support the different Regis brand websites
