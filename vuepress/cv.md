@@ -20,7 +20,7 @@ __Over 10 years working on web development (backend and frontend), preferably in
 
 ## Currently
 
-I'm an Engineering Manager at [BriteCore](http://www.britecore.com/) where I help write next generation insurance software in the cloud with python, vue and aws.
+I'm an Engineering Manager at [Regis](https://www.regiscorp.com/) where I help ensure thousands of franchisees are able to run profitable businesses by solving technical problems using Python and AWS.
 
 
 ## Technical skills
@@ -34,17 +34,29 @@ I'm an Engineering Manager at [BriteCore](http://www.britecore.com/) where I hel
 * Docker
 * Redis
 * AWS, Heroku
+* Sentry
 
 ## Areas of expertise
 
-* Backend, Rest APIs
+* Backend, Rest APIs, Lambda
 * Event based architectures using AWS services
   
 ## Employment
 
-`Springfield, MO (Remote) - 2020- `
+`Regis, Minneapolis (Remote) - 2022- `
 __BriteCore__ Engineering Manager.
-Development manager of 2 small remote teams (Policies and Quotes) where I conducted 1-on-1s, weekly planning sessions 
+Development manager and technical lead. 
+Helped in identifying and migrating/rewriting on-prem software to AWS.
+Developed solutions that are now supporting key areas of the business:
+- Apis to support the different Regis brand websites
+- Product ordering integrations
+- Tip payment integrations
+- Data integrations with Google
+- Implemented software monitoring solutions
+
+`Springfield, MO (Remote) - 2020-2022`
+__BriteCore__ Engineering Manager.
+Development manager of 2 remote teams (Policies and Quotes) where I conducted 1-on-1s, weekly planning sessions 
 with the Product Owner and helped the development team members complete their tasks by clarifying technical or 
 business questions. Met with clients when required and helped route and resolve urgent issues.
 
@@ -105,4 +117,4 @@ Fluent in English and Spanish
 
 <!-- ### Footer
 
-Last updated: 2020 -->
+Last updated: 2025 -->
