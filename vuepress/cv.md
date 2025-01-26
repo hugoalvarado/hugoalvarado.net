@@ -10,9 +10,9 @@ Senior Software Engineer
 <div id="webaddress">
 <a href="mailto:hugo102@gmail.com">hugo102@gmail.com</a>
 |
-<i class="fa fa-github"></i> <a href="http://github.com/hugoalvarado">hugoalvarado</a>
+<i class="fa-brands fa-github"></i> <a href="http://github.com/hugoalvarado">hugoalvarado</a>
 |
-<i class="fa fa-twitter"></i> <a href="http://twitter.com/_hugoalvarado">_hugoalvarado</a>
+<i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/hugoalvarado/">_hugoalvarado</a>
 </div>
 
 __Over 10 years working on web development (backend and frontend), preferably in Python and a modern JS framework. Experienced in full-time remote positions as team lead or manager.__
@@ -43,8 +43,8 @@ I'm an Engineering Manager at [Regis](https://www.regiscorp.com/) where I help e
   
 ## Employment
 
-`Regis, Minneapolis (Remote) - 2022- `
-__BriteCore__ Engineering Manager.
+`Minneapolis, Minnesota (Remote) - 2022- `
+__Regis__ Engineering Manager.
 Development manager and technical lead.
 Helped in identifying and migrating/rewriting on-prem software to AWS.
 Developed solutions that are now supporting key areas of the business:

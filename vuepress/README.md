@@ -7,8 +7,8 @@ footer: Developed using VuePress ♥️ | Hosted on AWS 🤖
 ---
 
 I am Hugo Alvarado. I have over 10 years working on web development (backend and frontend), 
-preferably in Python and a modern JS framework. Experienced in full-time remote positions as team lead or manager. 
+preferably in Python and a modern JS framework. Well experienced in full-time remote positions as team lead or manager.
 Loves pizza 🍕. Husband and father 👨‍👩‍👧‍👦. Hobby gardener 🍅. 
 AWS [Certified](https://www.youracclaim.com/badges/db60b566-df7a-40bb-99bc-b8a8177b8534/) Solutions Architect 🍻.
 
-[LinkedIn](https://www.linkedin.com/in/hugoalvarado/) | [CV](/cv/) | [Blog](/blog/) | [GitHub](https://github.com/hugoalvarado/) | [Me+2!](https://www.dropbox.com/s/m5luamfzz3klqas/IMG_20200410_141828330.jpg?dl=0)
+<i class="fa-brands fa-linkedin"></i> [LinkedIn](https://www.linkedin.com/in/hugoalvarado/) | [CV](/cv/) | [Blog](/blog/) | <i class="fa-brands fa-github"></i>  [GitHub](https://github.com/hugoalvarado/) | [Me+2!](./yhk3zfFN.jpeg)
