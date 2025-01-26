@@ -16,7 +16,6 @@ module.exports = {
           src: 'https://www.googletagmanager.com/gtag/js?id=UA-171809471-1'
       }],
         ['script', {
-          async: true,
           crossorigin: 'anonymous',
           src: 'https://kit.fontawesome.com/d06759fb7a.js',
       }],
